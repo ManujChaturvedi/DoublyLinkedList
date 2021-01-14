@@ -25,12 +25,12 @@ public class DoublyLinkedList {
         Node temp = head;
         while (temp!=null){
             try {
-                System.out.println(temp.prev.data +" "+temp.data+" "+temp.next.data);
+                System.out.println(temp.prev.data +" <-"+temp.data+"-> "+temp.next.data);
             }catch (NullPointerException np){
                 if (temp.prev == null)
-                    System.out.println( "null "+temp.data+" "+temp.next.data);
+                    System.out.println( "null <-"+temp.data+"-> "+temp.next.data);
                 else if (temp.next == null)
-                    System.out.println( temp.prev.data+" " +temp.data+" null");
+                    System.out.println( temp.prev.data+" <-" +temp.data+"-> null");
             }
 
             temp=temp.next;
