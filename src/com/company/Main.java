@@ -11,5 +11,8 @@ public class Main {
         doublyLinkedList.insert(4);
         doublyLinkedList.insert(5);
         doublyLinkedList.print();
+
+        doublyLinkedList.delete(2);
+        doublyLinkedList.print();
     }
 }

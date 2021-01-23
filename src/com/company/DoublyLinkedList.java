@@ -17,6 +17,29 @@ public class DoublyLinkedList {
         last = last.next;
     }
 
+    public void delete(int data){
+        if (head.data == data) {
+            head=head.next;
+            head.prev=null;
+        }else if(last.data==data){
+            last=last.prev;
+            last.next=null;
+        }else{
+            delete(data,head);
+        }
+    }
+
+
+    private void delete(int data,Node head){
+        Node temp = head;
+        while (temp.next.data!=data){
+            temp=temp.next;
+        }
+        temp.next.next.prev = temp;
+        temp.next = temp.next.next;
+
+    }
+
     public void print(){
         print(head);
     }
@@ -32,7 +55,6 @@ public class DoublyLinkedList {
                 else if (temp.next == null)
                     System.out.println( temp.prev.data+" <-" +temp.data+"-> null");
             }
-
             temp=temp.next;
         }
         System.out.println();
