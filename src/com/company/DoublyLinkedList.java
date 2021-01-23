@@ -30,6 +30,7 @@ public class DoublyLinkedList {
     }
 
 
+
     private void delete(int data,Node head){
         Node temp = head;
         while (temp.next.data!=data){
